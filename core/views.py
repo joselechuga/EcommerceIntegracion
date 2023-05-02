@@ -5,12 +5,13 @@ from django.shortcuts import render
 
 def indexPage(request):
 
-    url = "https://638cc70fd2fc4a058a5fbbdc.mockapi.io/s"
+    url = "https://636848caedc85dbc84e49015.mockapi.io/producto"
 
-    servicios = requests.request("GET", url)
-    servicios = servicios.json()
+    productos = requests.request("GET", url)
+    productos = productos.json()
 
     dato = {
-        'servicios': servicios
+        'productos': productos
     }
+    
     return render(request,'core/index.html',dato)
