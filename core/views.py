@@ -13,5 +13,9 @@ def indexPage(request):
     dato = {
         'productos': productos
     }
-    
+
+
     return render(request,'core/index.html',dato)
+
+def productos(request):
+    return render(request,'core/productos.html')
