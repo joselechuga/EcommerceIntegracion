@@ -32,13 +32,19 @@ $(document).ready(function () {
                 quantity:1,
                 name: prod.querySelector('h3').textContent,
                 precio: prod.querySelector('h4').textContent,
+                cantidad: 0
             }
             // console.log(infoProd)
 
             //combinando arrays 
             productosCarrito = [...productosCarrito,infoProd]
-            console.log(productosCarrito)
+            console.log(productosCarrito);
 
+            const cantidadprod = infoProd.cantidad +1 ;
+            const total = infoProd.cantidad * infoProd.precio;
+
+            console.log('total',total);
+            console.log('cant',cantidadprod);
         }
     })
 });
